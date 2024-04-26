@@ -10,7 +10,8 @@ const responseField = document.querySelector('#responseField');
 const getSuggestions = () => {
     const wordQuery = inputField.value;
     const endpoint = url + wordQuery;
-    fetch(endpoint, {cache: 'no-cache'}).then(response => {
+    fetch(endpoint, {cache: 'no-cache'})
+    .then(response => {
       if (response.ok) {
         return response.json()
       }
